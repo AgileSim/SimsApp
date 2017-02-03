@@ -1,5 +1,5 @@
-<form>
-  <input type="text" placeholder="{{'USER' | translate}}">
-  <input type="password" placeholder="{{'PASSWORD' | translate}}">
-  <input type="submit" value="{{'LOG_IN' | translate}}">
+<form (ngSubmit)="checkCredentials()" #loginForm="ngForm">
+  <input type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
+  <input type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
+  <input type="submit" value="{{'LOG_IN' | translate}}" [disabled]="!loginForm.form.valid">
 </form>

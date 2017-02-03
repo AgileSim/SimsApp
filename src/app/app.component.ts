@@ -10,7 +10,7 @@ import { QaLoginComponent } from './qa-login/qa-login.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Log in';
 
   constructor(translate: TranslateService) {
     translate.setDefaultLang('esES');
