@@ -1,5 +1,10 @@
 {
+    "ACCOUNTS": "CUENTAS",
+    "ACCOUNT_SCREEN": "Cuenta",
+    "CARDS": "TARJETAS",
+    "LOANS": "PRÉSTAMOS",
     "LOG_IN": "Entrar",
+    "LOG_IN_SCREEN": "Log in",
     "PASSWORD": "Contraseña",
     "USER": "Usuario"
 }

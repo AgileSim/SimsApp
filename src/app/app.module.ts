@@ -1,28 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
 import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { QaHeaderComponent } from './qa-header/qa-header.component';
-import { QaLoginComponent } from './qa-login/qa-login.component';
+import { QaLoginModule } from './qa-login/qa-login.module';
+import { QaAccountStatementModule } from './qa-account-statement/qa-account-statement.module';
+
+const appRoutes: Routes = [
+  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+]
 
 @NgModule({
   declarations: [
     AppComponent,
-    QaHeaderComponent,
-    QaLoginComponent
+    QaHeaderComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: useFactory,
       deps: [Http]
-    })
+    }),
+    QaLoginModule,
+    QaAccountStatementModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -30,6 +36,6 @@ import { QaLoginComponent } from './qa-login/qa-login.component';
 
 export class AppModule { }
 
-export function useFactory (http: Http) {
+export function useFactory(http: Http) {
   return new TranslateStaticLoader(http, '/assets/i18n', '.json');
 }
