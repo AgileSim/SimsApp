@@ -1,0 +1,29 @@
+.loan-container {
+    border-left: 0.3em solid #3bbaec;
+    margin: 1.5em 0.6em;
+    padding: 0.3em 0.6em 0.1em;
+    display: flex;
+    flex-direction: column;
+
+    span {
+        margin: 0.3em 0;
+
+        &:last-child {
+            margin-bottom: 0.1em;
+        }
+    }
+}
+
+.loan-header {
+    margin-bottom: 0.5em;
+    display: flex;
+
+    i {
+        margin-right: 0.5em;
+        font-size: 1.6em;
+    }
+
+    span {
+        color: #209e20;
+    }
+}

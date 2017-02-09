@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+
 @Component({
   selector: 'qa-loan-info',
   templateUrl: './qa-loan-info.component.html',

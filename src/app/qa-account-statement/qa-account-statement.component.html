@@ -1,11 +1,13 @@
-<qa-products-container title='ACCOUNTS'>
-    <qa-account-info *ngFor="let account of accounts" [account]="account"></qa-account-info>
-</qa-products-container>
+<div class="account-statement-container">
+    <qa-products-container title='ACCOUNTS'>
+        <qa-account-info *ngFor="let account of accounts" [account]="account"></qa-account-info>
+    </qa-products-container>
 
-<qa-products-container title='CARDS'>
-    <qa-card-info *ngFor="let card of cards" [card]="card"></qa-card-info>
-</qa-products-container>
+    <qa-products-container title='CARDS'>
+        <qa-card-info *ngFor="let card of cards" [card]="card"></qa-card-info>
+    </qa-products-container>
 
-<qa-products-container title='LOANS'>
-    <qa-loan-info *ngFor="let loan of loans" [loan]="loan"></qa-loan-info>
-</qa-products-container>
+    <qa-products-container title='LOANS'>
+        <qa-loan-info *ngFor="let loan of loans" [loan]="loan"></qa-loan-info>
+    </qa-products-container>
+</div>

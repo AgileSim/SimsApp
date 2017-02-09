@@ -1,7 +1,9 @@
 <div class="loan-container">
-  <i class="material-icons">local_florist</i>
-  <span>{{loan.alias}} ({{loan.type}})</span>
+  <div class="loan-header">
+    <i class="material-icons">local_florist</i>
+    <span><strong>{{loan.alias}} ({{loan.type}})</strong></span>
+  </div>
   <span>{{loan.number}}</span>
-  <span>{{loan.grantedCredit}} {{loan.currency}}</span>
-  <span>{{loan.pendingBalance}} {{loan.currency}}</span>
+  <span><strong>{{'GRANTED_LOAN' | translate}}: {{loan.grantedCredit}} {{loan.currency}}</strong></span>
+  <span>{{'PENDING_BALANCE' | translate}}: {{loan.pendingBalance}} {{loan.currency}}</span>
 </div>

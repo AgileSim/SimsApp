@@ -1,8 +1,10 @@
 <div class="card-container">
-  <i class="material-icons">credit_card</i>
-  <span>{{card.alias}}</span>
+  <div class="card-header">
+    <i class="material-icons">credit_card</i>
+    <span><strong>{{card.alias}}</strong></span>
+  </div>
   <span>{{card.number}}</span>
-  <span>{{card.availableBalance}} {{card.currency}}</span>
-  <span>{{card.disposedleBalance}} {{card.currency}}</span>
-  <span>{{card.grantedCredit}} {{card.currency}}</span>
+  <span><strong>{{'AVAILABLE' | translate}}: {{card.availableBalance}} {{card.currency}}</strong></span>
+  <span>{{'DISPOSED_BALANCE' | translate}}: {{card.disposedBalance}} {{card.currency}}</span>
+  <span>{{'GRANTED_CREDIT' | translate}}: {{card.grantedCredit}} {{card.currency}}</span>
 </div>

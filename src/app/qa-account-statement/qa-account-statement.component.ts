@@ -35,7 +35,7 @@ export class QaAccountStatementComponent implements OnInit {
     {
       alias: 'tarjeta1',
       number: '7894 5612 3078 9456 1230',
-      avaiableBalance: 200,
+      availableBalance: 200,
       currency: 'EUR',
       disposedBalance: 500,
       grantedCredit: 1000
@@ -43,7 +43,7 @@ export class QaAccountStatementComponent implements OnInit {
     {
       alias: 'tarjeta2',
       number: '7894 5612 3078 9456 1232',
-      avaiableBalance: 2001,
+      availableBalance: 2001,
       currency: 'EUR',
       disposedBalance: 5001,
       grantedCredit: 10001

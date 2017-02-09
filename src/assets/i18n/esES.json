@@ -1,10 +1,15 @@
 {
     "ACCOUNTS": "CUENTAS",
     "ACCOUNT_SCREEN": "Cuenta",
+    "AVAILABLE": "Disponible",
     "CARDS": "TARJETAS",
+    "DISPOSED_BALANCE": "Saldo dispuesto",
+    "GRANTED_CREDIT": "Crédito concedido",
+    "GRANTED_LOAN": "Préstamo concedido",
     "LOANS": "PRÉSTAMOS",
-    "LOG_IN": "Entrar",
+    "LOG_IN": "ENTRAR",
     "LOG_IN_SCREEN": "Log in",
     "PASSWORD": "Contraseña",
+    "PENDING_BALANCE": "Pendiente de pago",
     "USER": "Usuario"
 }

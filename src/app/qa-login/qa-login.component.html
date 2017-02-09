@@ -1,6 +1,7 @@
-<h2>{{'LOG_IN_SCREEN' | translate}}</h2>
-<form (ngSubmit)="checkCredentials()" #loginForm="ngForm">
-  <input type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
-  <input type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
-  <input type="submit" value="{{'LOG_IN' | translate}}" [disabled]="!loginForm.form.valid">
-</form>
+<div class="login-container">
+  <form (ngSubmit)="checkCredentials()" #loginForm="ngForm">
+    <input type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
+    <input type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
+    <input type="submit" value="{{'LOG_IN' | translate}}" [disabled]="!loginForm.form.valid">
+  </form>
+</div>
