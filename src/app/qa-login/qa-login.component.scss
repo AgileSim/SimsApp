@@ -10,6 +10,10 @@ form {
     input {
         margin: 1.5em;
         font-size: 13pt;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     input[type=text],
@@ -21,11 +25,15 @@ form {
 
         &:focus {            
             border-bottom: 0.2em solid #3bbaec;
-            outline: none;
         }
     }
 
-    input[type=submit] {
+    input[type="submit"][disabled]{
+        background-color: #cecece;
+        cursor: auto;
+    }
+
+    input[type=submit]{
         width: 8em;
         color: white;
         background-color: #15177d;
@@ -33,5 +41,6 @@ form {
         border: 0;
         padding: 0.4em;
         font-weight: bold;
+        cursor: pointer;
     }
 }
