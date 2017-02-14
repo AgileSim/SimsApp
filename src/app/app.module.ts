@@ -10,7 +10,7 @@ import { QaLoginModule } from './qa-login/qa-login.module';
 import { QaAccountStatementModule } from './qa-account-statement/qa-account-statement.module';
 
 const appRoutes: Routes = [
-  { path: '**', redirectTo: 'login', pathMatch: 'full' }
+  { path: '**', redirectTo: '/account'}
 ]
 
 @NgModule({

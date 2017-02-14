@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { QaLoginService } from './qa-login.service';
 
 
 @Component({
@@ -8,13 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QaLoginComponent {
 
-  username = '';
-  password = '';
 
-  checkCredentials() {
-    if (this.username === this.password) {
-      console.log('Eureka');
-    }
+  public username: String = '';
+  public password: String = '';
+  public showError: Boolean = false;
+
+  constructor(
+    private loginService: QaLoginService,
+    private router: Router
+  ) { }
+
+  checkCredentials(): void {
+    this.loginService.tryLogin(this.username, this.password)
+      .subscribe(
+      _ => this.router.navigate(['../account']),
+      _ => this.showError = true);
   }
-
 }

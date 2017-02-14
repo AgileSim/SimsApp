@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { QaAccountStatementService } from './qa-account-statement.service'
+
 @Component({
   selector: 'app-qa-account-statement',
   templateUrl: './qa-account-statement.component.html',
@@ -61,7 +63,7 @@ export class QaAccountStatementComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor( private accountService: QaAccountStatementService) { }
 
   ngOnInit() {
   }

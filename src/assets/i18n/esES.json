@@ -6,6 +6,7 @@
     "DISPOSED_BALANCE": "Saldo dispuesto",
     "GRANTED_CREDIT": "Crédito concedido",
     "GRANTED_LOAN": "Préstamo concedido",
+    "INCORRECT_CREDENTIALS": "Usuario o contraseña incorrectos",
     "LOANS": "PRÉSTAMOS",
     "LOG_IN": "ENTRAR",
     "LOG_IN_SCREEN": "Log in",

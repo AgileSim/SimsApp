@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { TranslateModule } from 'ng2-translate';
+import { HttpModule } from '@angular/http';
 
 
 import { QaLoginComponent } from './qa-login.component';
@@ -17,7 +18,8 @@ const loginRoutes: Routes = [
         CommonModule,
         FormsModule,
         RouterModule.forChild(loginRoutes),
-        TranslateModule
+        TranslateModule,
+        HttpModule
     ],
     declarations: [
         QaLoginComponent,

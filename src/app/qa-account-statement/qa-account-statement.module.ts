@@ -9,6 +9,7 @@ import { QaAccountInfoComponent } from './qa-account-info/qa-account-info.compon
 import { QaCardInfoComponent } from './qa-card-info/qa-card-info.component';
 import { QaLoanInfoComponent } from './qa-loan-info/qa-loan-info.component';
 import { QaProductsContainerComponent } from './qa-products-container/qa-products-container.component';
+import { QaAccountStatementService } from './qa-account-statement.service'
 
 const accountStatementRoutes: Routes = [
     { path: 'account', component: QaAccountStatementComponent}
@@ -29,7 +30,7 @@ const accountStatementRoutes: Routes = [
         QaProductsContainerComponent
     ],
     exports: [],
-    providers: []
+    providers: [ QaAccountStatementService ]
 })
 
 export class QaAccountStatementModule { }
