@@ -5,13 +5,8 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './qa-products-container.component.html',
   styleUrls: ['./qa-products-container.component.scss']
 })
-export class QaProductsContainerComponent implements OnInit {
+export class QaProductsContainerComponent {
 
   @Input() title: String;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
-import { Headers, RequestOptions, Http, Response, RequestMethod } from '@angular/http';
+import { Http, Headers, RequestOptions, Response, RequestMethod } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';;
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
+import { HttpInterceptor } from '../app.interceptors.service';
+
 @Injectable()
 export class QaLoginService {
 
     private loginUrl = 'http://localhost:8000/authenticate';
 
-    constructor (private http: Http) { }
+    constructor (private http: HttpInterceptor) { }
 
     tryLogin1 (username: String, password: String) {
         return Promise.resolve('any');
@@ -35,7 +37,6 @@ export class QaLoginService {
     }
 
     private handleError (error: Response | any) {
-        console.log(error);
         return Observable.throw('Error while retrieveng products');
     }
 }

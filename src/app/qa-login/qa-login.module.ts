@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { TranslateModule } from 'ng2-translate';
-import { HttpModule } from '@angular/http';
+import {
+    HttpModule,
+    XHRBackend,
+    RequestOptions,
+} from '@angular/http';
 
 
 import { QaLoginComponent } from './qa-login.component';
 import { QaLoginService } from './qa-login.service';
+import { HttpInterceptor } from '../app.interceptors.service';
 
 const loginRoutes: Routes = [
     { path: 'login', component: QaLoginComponent }
@@ -22,10 +27,12 @@ const loginRoutes: Routes = [
         HttpModule
     ],
     declarations: [
-        QaLoginComponent,
+        QaLoginComponent
     ],
-    exports: [ RouterModule ],
-    providers: [ QaLoginService ]
+    exports: [RouterModule],
+    providers: [QaLoginService,
+        { provide: HttpInterceptor, useClass: HttpInterceptor, deps: [XHRBackend, RequestOptions] }
+    ]
 })
 
 export class QaLoginModule { }

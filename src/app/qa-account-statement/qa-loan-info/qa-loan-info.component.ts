@@ -6,13 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './qa-loan-info.component.html',
   styleUrls: ['./qa-loan-info.component.scss']
 })
-export class QaLoanInfoComponent implements OnInit {
+export class QaLoanInfoComponent {
 
   @Input() loan;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

@@ -5,6 +5,6 @@
   </div>
   <span>{{card.number}}</span>
   <span><strong>{{'AVAILABLE' | translate}}: {{card.availableBalance}} {{card.currency}}</strong></span>
-  <span>{{'DISPOSED_BALANCE' | translate}}: {{card.disposedBalance}} {{card.currency}}</span>
-  <span>{{'GRANTED_CREDIT' | translate}}: {{card.grantedCredit}} {{card.currency}}</span>
+  <span *ngIf="card.disposedBalance">{{'DISPOSED_BALANCE' | translate}}: {{card.disposedBalance}} {{card.currency}}</span>
+  <span *ngIf="card.grantedCredit">{{'GRANTED_CREDIT' | translate}}: {{card.grantedCredit}} {{card.currency}}</span>
 </div>

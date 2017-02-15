@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 import { QaAccountStatementService } from './qa-account-statement.service'
 
+import { Account } from './qa-account-info/account';
+import { Card } from './qa-card-info/card';
+import { Loan } from './qa-loan-info/loan';
+
 @Component({
   selector: 'app-qa-account-statement',
   templateUrl: './qa-account-statement.component.html',
@@ -9,63 +13,19 @@ import { QaAccountStatementService } from './qa-account-statement.service'
 })
 export class QaAccountStatementComponent implements OnInit {
 
-  accounts = [
-    {
-      alias: 'cuenta1',
-      iban: 'ES45',
-      number: '0123654789654781230',
-      balance: 456,
-      currency: 'EUR'
-    },
-    {
-      alias: 'cuenta2',
-      iban: 'ES45',
-      number: '0123654789654781231',
-      balance: 41258,
-      currency: 'EUR'
-    },
-    {
-      alias: 'cuenta3',
-      iban: 'ES45',
-      number: '0123654789654781236',
-      balance: 2,
-      currency: 'EUR'
-    }
-  ];
-
-  cards = [
-    {
-      alias: 'tarjeta1',
-      number: '7894 5612 3078 9456 1230',
-      availableBalance: 200,
-      currency: 'EUR',
-      disposedBalance: 500,
-      grantedCredit: 1000
-    },
-    {
-      alias: 'tarjeta2',
-      number: '7894 5612 3078 9456 1232',
-      availableBalance: 2001,
-      currency: 'EUR',
-      disposedBalance: 5001,
-      grantedCredit: 10001
-    }
-  ];
-
-  loans = [
-    {
-      alias: 'loan1',
-      type: 'hipoteca',
-      number: '1234567890',
-      grantedCredit: 60000,
-      currency: 'EUR',
-      pendingBalance: 30000
-    }
-  ];
+  public accounts: Account[] = undefined;
+  public cards: Card[] = undefined;
+  public loans: Loan[] = undefined;
 
   constructor( private accountService: QaAccountStatementService) { }
 
   ngOnInit() {
+    this.accountService.getAccounts()
+        .subscribe((accounts: Account[]) =>{console.log(accounts); this.accounts = Array.from(accounts);});
+    this.accountService.getCards()
+        .subscribe((cards: Card[]) => this.cards = Array.from(cards));
+    this.accountService.getLoans()
+        .subscribe((loans: Loan[]) => this.loans = Array.from(loans));
+        console.log(this.accounts);
   }
-
 }
