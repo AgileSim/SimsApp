@@ -9,11 +9,12 @@ import { Account } from './qa-account-info/account';
 import { Card } from './qa-card-info/card';
 import { Loan } from './qa-loan-info/loan';
 import { HttpInterceptor } from '../app.interceptors.service';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class QaAccountStatementService {
 
-    private backUrlProducts = 'http://localhost:8000/products'
+    private backUrlProducts = environment.urlAPI + '/products'
 
     constructor(private http: HttpInterceptor) {}
 

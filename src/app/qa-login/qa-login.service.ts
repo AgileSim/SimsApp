@@ -7,11 +7,12 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
 import { HttpInterceptor } from '../app.interceptors.service';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class QaLoginService {
 
-    private loginUrl = 'http://localhost:8000/authenticate';
+    private loginUrl = environment.urlAPI + '/authenticate';
 
     constructor (private http: HttpInterceptor) { }
 
