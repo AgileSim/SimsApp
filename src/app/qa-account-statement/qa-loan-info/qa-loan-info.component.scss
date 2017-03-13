@@ -1,5 +1,7 @@
+@import '../../variables';
+
 .loan-container {
-    border-left: 0.3em solid #3bbaec;
+    border-left: 0.3em solid $tertiary-color;
     margin: 1.5em 0.6em;
     padding: 0.3em 0.6em 0.1em;
     display: flex;
@@ -24,6 +26,6 @@
     }
 
     span {
-        color: #209e20;
+        color: $focus-color;
     }
 }

@@ -1,3 +1,5 @@
+@import '../variables';
+
 h1 {
     color: white;
     text-align: center;
@@ -6,6 +8,6 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #ca1b52;
+    background-color: $primary-color;
 }
 
