@@ -3,7 +3,7 @@
     <i class="material-icons">local_florist</i>
     <span><strong>{{loan.alias}} ({{loan.type}})</strong></span>
   </div>
-  <span>{{loan.number}}</span>
-  <span><strong>{{'GRANTED_LOAN' | translate}}: {{loan.grantedCredit}} {{loan.currency}}</strong></span>
-  <span>{{'PENDING_BALANCE' | translate}}: {{loan.pendingBalance}} {{loan.currency}}</span>
+  <span class="loan-number">{{loan.number}}</span>
+  <span class="loan-granted-credit"><strong>{{'GRANTED_LOAN' | translate}}: {{loan.grantedCredit}} {{loan.currency}}</strong></span>
+  <span class="loan-pending-balance">{{'PENDING_BALANCE' | translate}}: {{loan.pendingBalance}} {{loan.currency}}</span>
 </div>

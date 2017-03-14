@@ -1,8 +1,8 @@
 <div class="login-container">
   <span *ngIf="showError">{{'INCORRECT_CREDENTIALS' | translate}}</span>
   <form (ngSubmit)="checkCredentials()" #loginForm="ngForm">
-    <input type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
-    <input type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
-    <input type="submit" value="{{'LOG_IN' | translate}}" [disabled]="!loginForm.form.valid">
+    <input class="login-user" type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
+    <input class="login-password" type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
+    <input class="login-submit-button" type="submit" value="{{'LOG_IN' | translate}}" [disabled]="!loginForm.form.valid">
   </form>
 </div>

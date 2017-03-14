@@ -3,8 +3,8 @@
     <i class="material-icons">credit_card</i>
     <span><strong>{{card.alias}}</strong></span>
   </div>
-  <span>{{card.number}}</span>
-  <span><strong>{{'AVAILABLE' | translate}}: {{card.availableBalance}} {{card.currency}}</strong></span>
-  <span *ngIf="card.disposedBalance">{{'DISPOSED_BALANCE' | translate}}: {{card.disposedBalance}} {{card.currency}}</span>
-  <span *ngIf="card.grantedCredit">{{'GRANTED_CREDIT' | translate}}: {{card.grantedCredit}} {{card.currency}}</span>
+  <span class="card-number">{{card.number}}</span>
+  <span class="card-available-balance"><strong>{{'AVAILABLE' | translate}}: {{card.availableBalance}} {{card.currency}}</strong></span>
+  <span class="card-disposed-balance" *ngIf="card.disposedBalance">{{'DISPOSED_BALANCE' | translate}}: {{card.disposedBalance}} {{card.currency}}</span>
+  <span class="card-granted-credit" *ngIf="card.grantedCredit">{{'GRANTED_CREDIT' | translate}}: {{card.grantedCredit}} {{card.currency}}</span>
 </div>
