@@ -7,7 +7,7 @@ import { Card } from './qa-card-info/card';
 import { Loan } from './qa-loan-info/loan';
 
 @Component({
-  selector: 'app-qa-account-statement',
+  selector: 'qa-account-statement',
   templateUrl: './qa-account-statement.component.html',
   styleUrls: ['./qa-account-statement.component.scss']
 })

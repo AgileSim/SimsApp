@@ -1,7 +1,13 @@
 @import '../variables';
 
+:host {
+  width: 100%;
+  position: fixed;
+  height: 5em;
+}
+
 .qa-header-container {
-    height: 5em;
+    height: $header-height;
     position: absolute;
     width: 100%;
     background-color: $primary-color;
