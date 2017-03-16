@@ -23,11 +23,10 @@ export class QaAccountStatementComponent implements OnInit {
   ngOnInit() {
     this.sharedService.setState('ACCOUNT_STATEMENT');
     this.accountService.getAccounts()
-        .subscribe((accounts: Account[]) =>{console.log(accounts); this.accounts = Array.from(accounts);});
+        .subscribe((accounts: Account[]) => this.accounts = Array.from(accounts));
     this.accountService.getCards()
         .subscribe((cards: Card[]) => this.cards = Array.from(cards));
     this.accountService.getLoans()
         .subscribe((loans: Loan[]) => this.loans = Array.from(loans));
-        console.log(this.accounts);
   }
 }
