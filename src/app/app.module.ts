@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { QaHeaderComponent } from './qa-header/qa-header.component';
 import { QaLoginModule } from './qa-login/qa-login.module';
 import { QaAccountStatementModule } from './qa-account-statement/qa-account-statement.module';
+import { SharedService } from './app.shared.service';
 
 const appRoutes: Routes = [
   { path: '**', redirectTo: '/login'}
@@ -30,8 +31,11 @@ const appRoutes: Routes = [
     QaAccountStatementModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ SharedService ],
+  bootstrap: [
+    AppComponent
+
+  ]
 })
 
 export class AppModule { }

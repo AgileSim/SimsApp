@@ -1,6 +1,7 @@
 {
     "ACCOUNTS": "CUENTAS",
     "ACCOUNT_SCREEN": "Cuenta",
+    "ACCOUNT_STATEMENT_TITLE": "Posición Global",
     "AVAILABLE": "Disponible",
     "CARDS": "TARJETAS",
     "DISPOSED_BALANCE": "Saldo dispuesto",
@@ -8,6 +9,7 @@
     "GRANTED_LOAN": "Préstamo concedido",
     "INCORRECT_CREDENTIALS": "Usuario o contraseña incorrectos",
     "LOANS": "PRÉSTAMOS",
+    "LOGIN_TITLE": "BANKTRIX",
     "LOG_IN": "ENTRAR",
     "LOG_IN_SCREEN": "Log in",
     "PASSWORD": "Contraseña",
