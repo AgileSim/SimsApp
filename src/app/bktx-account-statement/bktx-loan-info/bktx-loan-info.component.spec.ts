@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { QaLoanInfoComponent } from './qa-loan-info.component';
+import { BktxLoanInfoComponent } from './bktx-loan-info.component';
 
-describe('QaLoansInfoComponent', () => {
-  let component: QaLoanInfoComponent;
-  let fixture: ComponentFixture<QaLoanInfoComponent>;
+describe('BktxLoansInfoComponent', () => {
+  let component: BktxLoanInfoComponent;
+  let fixture: ComponentFixture<BktxLoanInfoComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QaLoanInfoComponent ]
+      declarations: [ BktxLoanInfoComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QaLoanInfoComponent);
+    fixture = TestBed.createComponent(BktxLoanInfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

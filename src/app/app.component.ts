@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { TranslateService } from 'ng2-translate';
 
-import { QaHeaderComponent } from './qa-header/qa-header.component';
-import { QaLoginComponent } from './qa-login/qa-login.component';
+import { BktxHeaderComponent } from './bktx-header/bktx-header.component';
+import { BktxLoginComponent } from './bktx-login/bktx-login.component';
 
 @Component({
   selector: 'app-root',

@@ -10,7 +10,7 @@ import { HttpInterceptor } from '../app.interceptors.service';
 import { environment } from '../../environments/environment';
 
 @Injectable()
-export class QaLoginService {
+export class BktxLoginService {
 
     private loginUrl = environment.urlAPI + '/authenticate';
 

@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
-import { QaAccountStatementService } from './qa-account-statement.service'
+import { BktxAccountStatementService } from './bktx-account-statement.service'
 import { SharedService } from '../app.shared.service';
-import { Account } from './qa-account-info/account';
-import { Card } from './qa-card-info/card';
-import { Loan } from './qa-loan-info/loan';
+import { Account } from './bktx-account-info/account';
+import { Card } from './bktx-card-info/card';
+import { Loan } from './bktx-loan-info/loan';
 
 @Component({
-  selector: 'qa-account-statement',
-  templateUrl: './qa-account-statement.component.html',
-  styleUrls: ['./qa-account-statement.component.scss']
+  selector: 'bktx-account-statement',
+  templateUrl: './bktx-account-statement.component.html',
+  styleUrls: ['./bktx-account-statement.component.scss']
 })
-export class QaAccountStatementComponent implements OnInit {
+export class BktxAccountStatementComponent implements OnInit {
 
   public accounts: Account[] = undefined;
   public cards: Card[] = undefined;
   public loans: Loan[] = undefined;
 
-  constructor( private accountService: QaAccountStatementService,
+  constructor( private accountService: BktxAccountStatementService,
     private sharedService:SharedService ) { }
 
   ngOnInit() {

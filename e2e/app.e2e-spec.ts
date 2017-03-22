@@ -1,10 +1,10 @@
-import { QAFrontPage } from './app.po';
+import { Banktrix } from './app.po';
 
-describe('qafront App', function() {
-  let page: QAFrontPage;
+describe('banktrix App', function() {
+  let page: Banktrix;
 
   beforeEach(() => {
-    page = new QAFrontPage();
+    page = new Banktrix();
   });
 
   it('should display message saying app works', () => {

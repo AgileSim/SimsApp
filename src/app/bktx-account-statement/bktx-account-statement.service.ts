@@ -5,14 +5,14 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
-import { Account } from './qa-account-info/account';
-import { Card } from './qa-card-info/card';
-import { Loan } from './qa-loan-info/loan';
+import { Account } from './bktx-account-info/account';
+import { Card } from './bktx-card-info/card';
+import { Loan } from './bktx-loan-info/loan';
 import { HttpInterceptor } from '../app.interceptors.service';
 import { environment } from '../../environments/environment';
 
 @Injectable()
-export class QaAccountStatementService {
+export class BktxAccountStatementService {
 
     private backUrlProducts = environment.urlAPI + '/products'
 

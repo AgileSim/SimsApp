@@ -10,12 +10,12 @@ import {
 } from '@angular/http';
 
 
-import { QaLoginComponent } from './qa-login.component';
-import { QaLoginService } from './qa-login.service';
+import { BktxLoginComponent } from './bktx-login.component';
+import { BktxLoginService } from './bktx-login.service';
 import { HttpInterceptor } from '../app.interceptors.service';
 
 const loginRoutes: Routes = [
-    { path: 'login', component: QaLoginComponent }
+    { path: 'login', component: BktxLoginComponent }
 ]
 
 @NgModule({
@@ -27,12 +27,12 @@ const loginRoutes: Routes = [
         HttpModule
     ],
     declarations: [
-        QaLoginComponent
+        BktxLoginComponent
     ],
     exports: [RouterModule],
-    providers: [QaLoginService,
+    providers: [BktxLoginService,
         { provide: HttpInterceptor, useClass: HttpInterceptor, deps: [XHRBackend, RequestOptions] }
     ]
 })
 
-export class QaLoginModule { }
+export class BktxLoginModule { }

@@ -5,9 +5,9 @@ import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-tra
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { QaHeaderComponent } from './qa-header/qa-header.component';
-import { QaLoginModule } from './qa-login/qa-login.module';
-import { QaAccountStatementModule } from './qa-account-statement/qa-account-statement.module';
+import { BktxHeaderComponent } from './bktx-header/bktx-header.component';
+import { BktxLoginModule } from './bktx-login/bktx-login.module';
+import { BktxAccountStatementModule } from './bktx-account-statement/bktx-account-statement.module';
 import { SharedService } from './app.shared.service';
 
 const appRoutes: Routes = [
@@ -17,7 +17,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    QaHeaderComponent
+    BktxHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +27,8 @@ const appRoutes: Routes = [
       useFactory: useFactory,
       deps: [Http]
     }),
-    QaLoginModule,
-    QaAccountStatementModule,
+    BktxLoginModule,
+    BktxAccountStatementModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [ SharedService ],

@@ -1,22 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { QaLoginService } from './qa-login.service';
+import { BktxLoginService } from './bktx-login.service';
 import { SharedService } from '../app.shared.service';
 
 @Component({
-  selector: 'qa-login',
-  templateUrl: './qa-login.component.html',
-  styleUrls: ['./qa-login.component.scss']
+  selector: 'bktx-login',
+  templateUrl: './bktx-login.component.html',
+  styleUrls: ['./bktx-login.component.scss']
 })
-export class QaLoginComponent extends OnInit {
+export class BktxLoginComponent extends OnInit {
 
   public username: String = '';
   public password: String = '';
   public showError: Boolean = false;
 
   constructor(
-    private loginService: QaLoginService,
+    private loginService: BktxLoginService,
     private router: Router,
     private sharedService: SharedService
   ) { super() }

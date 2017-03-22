@@ -1,0 +1,13 @@
+<div class="account-statement-container">
+    <bktx-products-container title='ACCOUNTS' *ngIf="accounts">
+        <bktx-account-info *ngFor="let account of accounts" [account]="account"></bktx-account-info>
+    </bktx-products-container>
+
+    <bktx-products-container title='CARDS' *ngIf="cards">
+        <bktx-card-info *ngFor="let card of cards" [card]="card"></bktx-card-info>
+    </bktx-products-container>
+
+    <bktx-products-container title='LOANS' *ngIf="loans">
+        <bktx-loan-info *ngFor="let loan of loans" [loan]="loan"></bktx-loan-info>
+    </bktx-products-container>
+</div>

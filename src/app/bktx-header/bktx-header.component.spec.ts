@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { QaCardInfoComponent } from './qa-card-info.component';
+import { BktxHeaderComponent } from './bktx-header.component';
 
-describe('QaCardsInfoComponent', () => {
-  let component: QaCardInfoComponent;
-  let fixture: ComponentFixture<QaCardInfoComponent>;
+describe('BktxHeaderComponent', () => {
+  let component: BktxHeaderComponent;
+  let fixture: ComponentFixture<BktxHeaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QaCardInfoComponent ]
+      declarations: [ BktxHeaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(QaCardInfoComponent);
+    fixture = TestBed.createComponent(BktxHeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
