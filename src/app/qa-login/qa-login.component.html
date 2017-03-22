@@ -1,5 +1,5 @@
 <div class="login-container">
-  <span *ngIf="showError">{{'INCORRECT_CREDENTIALS' | translate}}</span>
+  <span class="error-message" *ngIf="showError">{{'INCORRECT_CREDENTIALS' | translate}}</span>
   <form (ngSubmit)="checkCredentials()" #loginForm="ngForm">
     <input class="login-user" type="text" required placeholder="{{'USER' | translate}}" name="username" [(ngModel)]="username">
     <input class="login-password" type="password" required placeholder="{{'PASSWORD' | translate}}" name="password" [(ngModel)]="password">
