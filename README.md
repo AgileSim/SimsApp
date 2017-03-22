@@ -1,4 +1,4 @@
-# QAFront
+# Banktrix
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
@@ -15,7 +15,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Serve or Build with different environment
 
-`ng serve --production` or `ng s -prod` will deploy the server with the configuration under _src/environments/environment.prod.ts_. Equally with build. 
+`ng serve --production` or `ng s -prod` will deploy the server with the configuration under _src/environments/environment.prod.ts_. Equally with build.
 
 
 ## Running unit tests
