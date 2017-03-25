@@ -41,5 +41,5 @@ const appRoutes: Routes = [
 export class AppModule { }
 
 export function useFactory(http: Http) {
-  return new TranslateStaticLoader(http, '/assets/i18n', '.json');
+  return new TranslateStaticLoader(http, 'assets/i18n', '.json');
 }
