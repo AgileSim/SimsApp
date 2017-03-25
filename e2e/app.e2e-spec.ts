@@ -1,14 +1,14 @@
-import { Banktrix } from './app.po';
+import { BanktrixPage } from './app.po';
 
 describe('banktrix App', function() {
-  let page: Banktrix;
+  let page: BanktrixPage;
 
   beforeEach(() => {
-    page = new Banktrix();
+    page = new BanktrixPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display message saying BANKTRIX', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('BANKTRIX');
   });
 });
